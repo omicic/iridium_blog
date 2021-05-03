@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
 
-    $text: #4c4c4c;
-    $darkgray: #1d1d1d;
-    $lightgray: #f2f2f2;
-    $footerBg: rgba(255,255,255,.2);
-    $white: #fff;
-    $orange: #e95d3c;
-    $transition: .2s ease;
+$text: #4c4c4c;
+$darkgray: #1d1d1d;
+$lightgray: #f2f2f2;
+$footerBg: rgba(255, 255, 255, .2);
+$white: #fff;
+$orange: #e95d3c;
+$transition: .2s ease;
+$paddingY: 80px;
 
-@mixin flex($justify,$align,$direction){
+@mixin flex($justify, $align, $direction) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
 }
 
-@mixin btn(){
-    padding: 20px;
+@mixin btn() {
+    padding: 20px 35px;
     border: none;
     border-radius: 50px;
     background-color: $orange;
     color: $white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: $transition;
+
     &:hover {
         opacity: .7;
     }
@@ -45,23 +47,35 @@ body {
 
 .container {
     width: 90%;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
 ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
+    transition: $transition;
+    color: $white;
+    &:hover{
+        color: $orange;
+    }
 }
+
 hr {
-   background: $lightgray;  
-   height: 2px;         
-   border: none;  
+    background: $lightgray;
+    height: 2px;
+    border: none;
 }
 
 /***header***/
@@ -72,7 +86,7 @@ header {
     text-align: center;
     padding: 200px 0;
 
-    h1{
+    h1 {
         color: $white;
         font-size: 8rem;
         text-transform: uppercase;
@@ -87,18 +101,19 @@ header {
     }
 
     nav {
-       
+
         color: $white;
 
-        ul{
+        ul {
             @include flex(center, center, row);
-           margin: 30px 0;
-           li {
-               margin: 20px 30px;
-               text-transform: uppercase;
-               font-weight: 500;
-               font-size: 1.5rem;
-           }
+            margin: 30px 0;
+
+            li {
+                margin: 20px 30px;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
         }
     }
 }
@@ -106,32 +121,36 @@ header {
 /***wecome***/
 .welcome {
     @include flex(space-between, flex-start, row);
-    article:nth-child(1){
+    padding: $paddingY 0;
+
+    article:nth-child(1) {
         flex: 0 0 55%;
+
         h2 {
             text-transform: uppercase;
             font-size: 4rem;
-           
+
         }
 
         h4 {
-            padding:20px 0;
+            padding: 20px 0;
             font-size: 1.3rem;
         }
 
-        img{
+        img {
             width: 100%;
             padding: 20px 0;
         }
-         p{
-             font-weight: 500;
-             line-height: 1.5rem;
-             font-size: 1.2rem;
-         }
 
-    }    
+        p {
+            font-weight: 500;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
 
-    article:nth-child(2){
+    }
+
+    article:nth-child(2) {
         flex: 0 0 40%;
 
         h3 {
@@ -139,24 +158,93 @@ header {
             padding-bottom: 80px;
         }
 
-        p{
-            color: $text;
-        }
+
         div {
+            p{
+                padding: 30px 0
+            }
             div {
                 @include flex(space-between, center, row);
-                padding: 50px 0;
+                padding: 20px 0 50px 0;
 
-                img{
+                img {
                     flex: 0 0 25%;
                 }
-                p{
+
+                p {
                     flex: 0 0 70%;
+                    font-size: 1.4rem;
                     line-height: 2rem;
                 }
-            }         
+            }
         }
+    }
 }
 
+.heading {
+    background: $lightgray;
+    padding: $paddingY 0;
+
+    article {
+        @include flex(space-between, center, row);
+
+        .cards {
+            flex: 0 0 31%;
+
+            h2 {
+                text-transform: uppercase;
+                padding-bottom: 20px;
+                font-size: 2rem;
+            }
+
+            img {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            p {
+                line-height: 2.2rem;
+                font-size: 1.5rem;
+            }
+
+            button {
+                @include btn();
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
+footer {
+    background: $text;
+    color: $white;
+    padding: $paddingY 0;
+
+    article {
+        @include flex(flex-start, flex-start, row);
+        margin: 0;
+
+        div {
+            flex: 0 0 33%;
+
+            h2 {
+                font-size: 1.8rem;
+                padding-bottom: 30px;
+            }
+
+            li {
+                padding-bottom: 10px;
+                font-weight: 600;
+                text-align: left;
+
+                a {
+                    color: $white;
+                }
+            }
+
+            .b {
+                font-weight: 700;
+            }
+        }
+    }
+}

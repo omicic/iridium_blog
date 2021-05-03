@@ -16,10 +16,15 @@ body {
 
 .container {
   width: 90%;
-  margin: 50px auto;
+  margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -29,6 +34,13 @@ ul {
 
 a {
   text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  color: #fff;
+}
+
+a:hover {
+  color: #e95d3c;
 }
 
 hr {
@@ -103,6 +115,7 @@ header nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 80px 0;
 }
 
 .welcome article:nth-child(1) {
@@ -128,8 +141,8 @@ header nav ul li {
 
 .welcome article:nth-child(1) p {
   font-weight: 500;
-  line-height: 1.5rem;
-  font-size: 1.2rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
 }
 
 .welcome article:nth-child(2) {
@@ -143,8 +156,8 @@ header nav ul li {
   padding-bottom: 80px;
 }
 
-.welcome article:nth-child(2) p {
-  color: #4c4c4c;
+.welcome article:nth-child(2) div p {
+  padding: 30px 0;
 }
 
 .welcome article:nth-child(2) div div {
@@ -161,7 +174,7 @@ header nav ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 50px 0;
+  padding: 20px 0 50px 0;
 }
 
 .welcome article:nth-child(2) div div img {
@@ -174,6 +187,114 @@ header nav ul li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 70%;
           flex: 0 0 70%;
+  font-size: 1.4rem;
   line-height: 2rem;
+}
+
+.heading {
+  background: #f2f2f2;
+  padding: 80px 0;
+}
+
+.heading article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.heading article .cards {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 31%;
+          flex: 0 0 31%;
+}
+
+.heading article .cards h2 {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  font-size: 2rem;
+}
+
+.heading article .cards img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.heading article .cards p {
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+}
+
+.heading article .cards button {
+  padding: 20px 35px;
+  border: none;
+  border-radius: 50px;
+  background-color: #e95d3c;
+  color: #fff;
+  font-size: 1.3rem;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin-top: 20px;
+}
+
+.heading article .cards button:hover {
+  opacity: .7;
+}
+
+footer {
+  background: #4c4c4c;
+  color: #fff;
+  padding: 80px 0;
+}
+
+footer article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+}
+
+footer article div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+}
+
+footer article div h2 {
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+}
+
+footer article div li {
+  padding-bottom: 10px;
+  font-weight: 600;
+  text-align: left;
+}
+
+footer article div li a {
+  color: #fff;
+}
+
+footer article div .b {
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
