@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+
+    $text: #4c4c4c;
+    $darkgray: #1d1d1d;
+    $lightgray: #f2f2f2;
+    $footerBg: rgba(255,255,255,.2);
+    $white: #fff;
+    $orange: #e95d3c;
+    $transition: .2s ease;
+
+@mixin flex($justify,$align,$direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin btn(){
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: $orange;
+    color: $white;
+    font-size: 1.2rem;
+    transition: $transition;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+
+/***basic***/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    color: $text;
+    letter-spacing: 1px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/***header***/
+header {
+    background: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding:200px 0;
+    h1{
+        color: $white;
+        font-size: 8rem;
+        text-transform: uppercase;
+        text-shadow: 1px 0px 5px $orange;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $orange;
+    }
+
+    nav {
+       
+        color: $white;
+
+        ul{
+            @include flex(center, center, row);
+           margin: 30px 0;
+           li {
+               margin: 20px 30px;
+               text-transform: uppercase;
+               font-weight: 500;
+               font-size: 1.5rem;
+           }
+        }
+    }
+}
+
+
+
