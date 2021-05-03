@@ -250,13 +250,26 @@ header nav ul li {
   opacity: .7;
 }
 
-footer {
+.navigation {
   background: #4c4c4c;
   color: #fff;
   padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-footer article {
+.navigation article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,28 +286,34 @@ footer article {
   margin: 0;
 }
 
-footer article div {
+.navigation article div {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33%;
           flex: 0 0 33%;
 }
 
-footer article div h2 {
+.navigation article div h2 {
   font-size: 1.8rem;
   padding-bottom: 30px;
 }
 
-footer article div li {
+.navigation article div li {
   padding-bottom: 10px;
   font-weight: 600;
   text-align: left;
 }
 
-footer article div li a {
+.navigation article div li a {
   color: #fff;
 }
 
-footer article div .b {
+.navigation article div .b {
   font-weight: 700;
+}
+
+footer {
+  background-color: #1d1d1d;
+  text-align: center;
+  padding: 20px 0;
 }
 /*# sourceMappingURL=style.css.map */

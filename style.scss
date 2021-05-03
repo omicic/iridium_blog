@@ -215,16 +215,17 @@ header {
     }
 }
 
-footer {
+.navigation {
     background: $text;
     color: $white;
     padding: $paddingY 0;
+    @include flex(center, center, column);
 
-    article {
+    article{
         @include flex(flex-start, flex-start, row);
         margin: 0;
 
-        div {
+        div{
             flex: 0 0 33%;
 
             h2 {
@@ -247,4 +248,10 @@ footer {
             }
         }
     }
+}
+
+footer{
+    background-color: $darkgray;
+    text-align: center;
+    padding: 20px 0;
 }
